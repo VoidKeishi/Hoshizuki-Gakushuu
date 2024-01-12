@@ -34,7 +34,6 @@ add_dictionary = st.sidebar.button("📗Dictionary", on_click=openFeature, args=
 
 if st.session_state["openMakeQuiz"]:
   makeQuiz.makeQuiz()
-  print(st.session_state['conversationsQuiz'])
 if st.session_state["openChat"]:
   chat.chat()
 if st.session_state["openDictionary"]:
