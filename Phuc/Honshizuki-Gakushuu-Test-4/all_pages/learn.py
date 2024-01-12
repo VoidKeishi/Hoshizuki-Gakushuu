@@ -1,6 +1,7 @@
 from features import *
 
 def Learn():
+    import os
     import streamlit as st
     from utils import convertObjectToString
     
@@ -28,10 +29,23 @@ def Learn():
 
     st.sidebar.button( "📗Dictionary", on_click=openFeature, args=("openDictionary",))
 
+    st.sidebar.write('---')
+
+    filenames = os.listdir(os.path.join(os.getcwd(), "samples"))
+
     if st.session_state["openMakeQuiz"]:
-        makeQuiz.makeQuiz()
-        st.sidebar.download_button(
-            "Export Quiz", convertObjectToString.convertObjectToString(st.session_state["conversationsQuiz"]))
+        jlptLevel = st.sidebar.selectbox(
+            "Choose your level",
+            ("N5", "N4", "N3", "N2", "N1"),
+        )
+        quizFile = st.sidebar.selectbox(
+            label="Choose quiz",
+            options=filenames,
+            index=None
+        )
+        if quizFile:
+            showQuiz.showQuiz(quizFile)
+        st.sidebar.button("Generate Quiz", on_click=makeQuiz.makeQuiz, args=(jlptLevel, ))
     if st.session_state["openChat"]:
         chat.chat()
         st.sidebar.download_button(
@@ -40,3 +54,4 @@ def Learn():
         dictionary.dictionary()
         st.sidebar.download_button(
             "Export Dictionary", convertObjectToString.convertObjectToString(st.session_state["conversationsDictionary"]))
+    
