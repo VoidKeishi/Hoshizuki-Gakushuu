@@ -1,4 +1,5 @@
-from features import *
+from features.controller import *
+from features.view import *
 
 def Learn():
     import os
