@@ -1,0 +1,77 @@
+.chat-row {
+  display: flex;
+  margin: 5px;
+  width: 100%;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.chat-bubble {
+  font-family: "Source Sans Pro", sans-serif, "Segoe UI", "Roboto", sans-serif;
+  border: 1px solid transparent;
+  padding: 5px 10px;
+  margin: 0px 7px 20px;
+  max-width: 70%;
+}
+
+.ai-bubble {
+  background: rgb(240, 242, 246);
+  border-radius: 10px;
+}
+
+.human-bubble {
+  background: linear-gradient(135deg, rgb(0, 178, 255) 0%, rgb(0, 106, 255) 100%); 
+  color: white;
+  border-radius: 20px;
+}
+
+.chat-icon {
+  border-radius: 5px;
+}
+div.st-emotion-cache-r421ms {
+  position: fixed;
+  bottom: 0;
+  width: inherit;
+  background-color: black;
+}
+
+div.prompt-title {
+  margin-bottom: 10px;
+}
+
+div.prompt-title span{
+  color: white;
+  font-size: 20px;
+}
+
+div.prompt-title span.prompt-title {
+  font-weight: 700;
+}
+
+.st-emotion-cache-uf99v8 {
+  overflow-y: hidden;
+}
+
+.st-emotion-cache-1y4p8pa {
+  max-width: 90rem;
+}
+
+.st-emotion-cache-13g57je {
+  overflow-y: auto;
+  height: 700px;
+  overflow-x: hidden;
+}
+
+.st-emotion-cache-1629p8f span {
+  position: fixed;
+  z-index: 999;
+  top: 60px;
+}
+
+.st-emotion-cache-1fjr796 {
+  height: 768px;
+  overflow-y: auto;
+  overflow-x: auto;
+}

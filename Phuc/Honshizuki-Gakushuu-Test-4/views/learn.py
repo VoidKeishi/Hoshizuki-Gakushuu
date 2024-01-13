@@ -1,13 +1,17 @@
-from features import *
+from features.controller import *
+from features.view import *
 
 def Learn():
     import os
     import streamlit as st
     from utils import convertObjectToString
-    
-    print("Learn page is rendering...\n")
-    with open('assets/learn.css') as styleSheet:
-        st.markdown(f'<style>{styleSheet.read()}</style>', unsafe_allow_html=True)
+
+    # def load_css():
+    #     with open("static/learn.css", "r") as styleSheet:
+    #         css = f"<style>{styleSheet.read()}</style>"
+    #         st.markdown(css, unsafe_allow_html=True)
+
+    # load_css()
 
     allFeatures = ["openMakeQuiz", "openChat", "openDictionary"]
 
@@ -25,10 +29,6 @@ def Learn():
 
     st.sidebar.button( "😃Japanese Quiz", on_click=openFeature, args=("openMakeQuiz",))
 
-    st.sidebar.button("💬Chat", on_click=openFeature, args=("openChat",))
-
-    st.sidebar.button( "📗Dictionary", on_click=openFeature, args=("openDictionary",))
-
     st.sidebar.write('---')
 
     filenames = os.listdir(os.path.join(os.getcwd(), "samples"))
@@ -40,18 +40,10 @@ def Learn():
         )
         quizFile = st.sidebar.selectbox(
             label="Choose quiz",
-            options=filenames,
+            options=filenames[1:],
             index=None
         )
         if quizFile:
             showQuiz.showQuiz(quizFile)
         st.sidebar.button("Generate Quiz", on_click=makeQuiz.makeQuiz, args=(jlptLevel, ))
-    if st.session_state["openChat"]:
-        chat.chat()
-        st.sidebar.download_button(
-            "Export Chat", convertObjectToString.convertObjectToString(st.session_state["conversationsChat"]))
-    if st.session_state["openDictionary"]:
-        dictionary.dictionary()
-        st.sidebar.download_button(
-            "Export Dictionary", convertObjectToString.convertObjectToString(st.session_state["conversationsDictionary"]))
     
