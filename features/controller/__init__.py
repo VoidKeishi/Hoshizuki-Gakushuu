@@ -1,1 +1,1 @@
-__all__ = ["makeQuiz", "dictionary", "chat"]
+__all__ = ["makeQuiz", "dictionary", "chat", "ocr"]
