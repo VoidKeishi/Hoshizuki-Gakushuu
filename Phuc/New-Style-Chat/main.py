@@ -45,8 +45,8 @@ with chat_placeholder:
       div = f"""
         <div class="chat-row
         {'' if chat["role"] == "assistant" else "row-reverse"}">
-          <img class="chat-icon" src="app/static/{'robot' if chat["role"] == "assistant"
-                                else 'people  '}"
+          <img class="chat-icon" src="app/static/{'robot.png' if chat["role"] == "assistant"
+                                else 'people.png'}"
                 width=32 height=32>
           <div class="chat-bubble
           {'ai-bubble' if chat["role"] == "assistant" else "human-bubble"}">
@@ -56,8 +56,14 @@ with chat_placeholder:
       """
       st.markdown(div, unsafe_allow_html=True)
 
+prompt_title = f"""
+  <div class="prompt-title">
+    <span class="prompt-title">Chat</span>
+    <span class="prompt-action">- press Enter to chat </span>
+  </div>
+"""
 with prompt_placeholder:
-  st.markdown("**Chat** - _press Enter to Submit_")
+  st.markdown(prompt_title, unsafe_allow_html=True)
   cols = st.columns((6, 1))
   cols[0].text_input(
     "Chat",

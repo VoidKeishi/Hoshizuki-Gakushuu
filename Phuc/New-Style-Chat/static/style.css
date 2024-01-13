@@ -30,3 +30,20 @@
 .chat-icon {
   border-radius: 5px;
 }
+div.st-emotion-cache-r421ms {
+  position: fixed;
+  bottom: 0;
+}
+
+div.prompt-title {
+  margin-bottom: 10px;
+}
+
+div.prompt-title span{
+  color: white;
+  font-size: 20px;
+}
+
+div.prompt-title span.prompt-title {
+  font-weight: 700;
+}
