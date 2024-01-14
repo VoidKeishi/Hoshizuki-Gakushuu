@@ -8,8 +8,12 @@ st.set_page_config(
   page_icon="🇯🇵",
 )
 
-with open('assets/main.css') as styleSheet:
-        st.markdown(f'<style>{styleSheet.read()}</style>', unsafe_allow_html=True)
+# def load_css():
+#   with open("static/main.css", "r") as styleSheet:
+#     css = f"<style>{styleSheet.read()}</style>"
+#     st.markdown(css, unsafe_allow_html=True)
+
+# load_css()
 
 with st.sidebar:
   add_logo = st.sidebar.markdown(
@@ -21,7 +25,9 @@ with st.sidebar:
 
 print("Main page is rendering....\n")
 
-if optionMenu == "Learn":
-  learn.Learn()
 if optionMenu == "Home":
   home.Home()
+if optionMenu == "Learn":
+  learn.Learn()
+if optionMenu == "Chat":
+  chat.Chat()

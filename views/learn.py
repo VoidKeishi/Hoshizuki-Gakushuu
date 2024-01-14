@@ -7,7 +7,7 @@ def Learn():
     from utils import convertObjectToString
     
     print("Learn page is rendering...\n")
-    with open('assets/learn.css') as styleSheet:
+    with open('static/learn.css') as styleSheet:
         st.markdown(f'<style>{styleSheet.read()}</style>', unsafe_allow_html=True)
 
     allFeatures = ["openMakeQuiz", "openChat", "openDictionary"]
@@ -48,7 +48,7 @@ def Learn():
             showQuiz.showQuiz(quizFile)
         st.sidebar.button("Generate Quiz", on_click=makeQuiz.makeQuiz, args=(jlptLevel, ))
     if st.session_state["openChat"]:
-        chat.chat()
+        chatNihongo.chat()
         st.sidebar.download_button(
             "Export Chat", convertObjectToString.convertObjectToString(st.session_state["conversationsChat"]))
     if st.session_state["openDictionary"]:
