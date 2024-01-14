@@ -4,9 +4,9 @@ def chatNihongo():
     from openai import AzureOpenAI
 
     client = AzureOpenAI(
-        api_key = os.getenv("API_KEY"),  
-        api_version = os.getenv("API_VERSION"),
-        azure_endpoint = os.getenv("END_POINT")
+        api_key = st.secrets.API_KEY,  
+        api_version = st.secrets.API_VERSION,
+        azure_endpoint = st.secrets.END_POINT 
     )
 
     

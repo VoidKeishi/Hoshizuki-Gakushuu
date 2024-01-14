@@ -4,9 +4,9 @@ def dictionary():
     from openai import AzureOpenAI
 
     client = AzureOpenAI(
-        api_key = os.getenv("API_KEY"),  
-        api_version = os.getenv("API_VERSION"),
-        azure_endpoint = os.getenv("END_POINT")
+        api_key = st.secrets.API_KEY,  
+        api_version = st.secrets.API_VERSION,
+        azure_endpoint = st.secrets.END_POINT 
     )
 
     content = "You are a brilliant teacher that teach Japanese. You have an extremely good memory that can memorized Japanese vocab and library, you are the professional of Japanese vocabulary. In addition to providing the meaning of the word, you also provide the kanji and examples sentences"
