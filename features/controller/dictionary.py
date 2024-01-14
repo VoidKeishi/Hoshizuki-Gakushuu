@@ -1,12 +1,12 @@
 def dictionary():
+    import os
     import streamlit as st
     from openai import AzureOpenAI
 
     client = AzureOpenAI(
-        api_key="16ed8a71e992441f98be936d5767fea4",
-        api_version="2023-05-15",
-        # Your Azure OpenAI resource's endpoint value.
-        azure_endpoint="https://sunhackathon22.openai.azure.com/"
+        api_key = os.getenv("API_KEY"),  
+        api_version = os.getenv("API_VERSION"),
+        azure_endpoint = os.getenv("END_POINT")
     )
 
     content = "You are a brilliant teacher that teach Japanese. You have an extremely good memory that can memorized Japanese vocab and library, you are the professional of Japanese vocabulary. In addition to providing the meaning of the word, you also provide the kanji and examples sentences"

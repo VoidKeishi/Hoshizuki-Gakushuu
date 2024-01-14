@@ -55,12 +55,12 @@ def Chat():
 
   def viewChatHistory(filename):
     st.session_state["currentChatName"] = filename.split('.')[0]
-    with open(os.path.join(os.getcwd(), "samples\\chat-history", filename), 'r') as json_file:
+    with open(os.path.join(os.getcwd(), "samples/chat-history", filename), 'r') as json_file:
       json_data = json.load(json_file)
       st.session_state["conversationsChat"] = json_data
   
   def deleteChatHistory(filename):
-    json_file = os.path.join(os.getcwd(), "samples\\chat-history", filename)
+    json_file = os.path.join(os.getcwd(), "samples/chat-history", filename)
     os.remove(json_file)
     if filename.split('.')[0] == st.session_state["currentChatName"]:
       st.session_state["currentChatName"] = ""
@@ -72,7 +72,7 @@ def Chat():
         history_chat = st.container()
         with history_chat:
           st.markdown("# Your Chat History")
-          filenames = os.listdir(os.path.join(os.getcwd(), "samples\\chat-history"))
+          filenames = os.listdir(os.path.join(os.getcwd(), "samples/chat-history"))
           for filename in filenames:
               with st.container():
                 button_col = st.columns([1, 1])
@@ -90,7 +90,7 @@ def Chat():
       initialize_chat_state()
 
       def on_click_callback():
-        output_dir = os.path.join(os.getcwd(), "samples\\chat-history")
+        output_dir = os.path.join(os.getcwd(), "samples/chat-history")
         human_prompt = st.session_state.human_prompt
         st.session_state.human_prompt = ""
         st.session_state.conversationsChat.append({"role": "user", "content": human_prompt})

@@ -5,9 +5,9 @@ def makeQuiz(jlptLevel, topic):
     import datetime
 
     client = AzureOpenAI(
-            api_key = "16ed8a71e992441f98be936d5767fea4",  
-            api_version = "2023-05-15",
-            azure_endpoint = "https://sunhackathon22.openai.azure.com/"
+        api_key = os.getenv("API_KEY"),  
+        api_version = os.getenv("API_VERSION"),
+        azure_endpoint = os.getenv("END_POINT")
     )
 
     # jlptLevel = "N3"
