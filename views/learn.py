@@ -26,10 +26,6 @@ def Learn():
 
     st.sidebar.button( "😃Japanese Quiz", on_click=openFeature, args=("openMakeQuiz",))
 
-    st.sidebar.button("💬Chat", on_click=openFeature, args=("openChat",))
-
-    st.sidebar.button( "📗Dictionary", on_click=openFeature, args=("openDictionary",))
-
     st.sidebar.write('---')
 
     filenames = os.listdir(os.path.join(os.getcwd(), "samples"))
@@ -47,12 +43,4 @@ def Learn():
         if quizFile:
             showQuiz.showQuiz(quizFile)
         st.sidebar.button("Generate Quiz", on_click=makeQuiz.makeQuiz, args=(jlptLevel, ))
-    if st.session_state["openChat"]:
-        chatNihongo.chat()
-        st.sidebar.download_button(
-            "Export Chat", convertObjectToString.convertObjectToString(st.session_state["conversationsChat"]))
-    if st.session_state["openDictionary"]:
-        dictionary.dictionary()
-        st.sidebar.download_button(
-            "Export Dictionary", convertObjectToString.convertObjectToString(st.session_state["conversationsDictionary"]))
     
