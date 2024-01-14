@@ -18,6 +18,7 @@ def Learn():
 
     def openFeature(featureName):
         print("Clicked on feature: " + featureName)
+        print(filenames)
         for feature in allFeatures:
             if (feature == featureName):
                 st.session_state[feature] = True
@@ -33,14 +34,31 @@ def Learn():
     if st.session_state["openMakeQuiz"]:
         jlptLevel = st.sidebar.selectbox(
             "Choose your level",
-            ("N5", "N4", "N3", "N2", "N1"),
+            ('N1', 'N2', 'N3', 'N4', 'N5'),
         )
+        topic = st.sidebar.selectbox(
+            "Choose topic",
+            ('Kanji', 'Vocabulary', 'Grammar'),
+        )
+
+        # Filter filenames based on the selected level and topic
+        filtered_filenames = [name for name in filenames if jlptLevel in name and topic.lower() in name.lower()]
+        print(filtered_filenames)
+        # Create formatted names with indices for the selected level and topic
+        formatted_names_with_indices = [
+            f'{jlptLevel} {topic} Quiz #{i+1}' for i, name in enumerate(filtered_filenames)
+        ]
+        
+        # Create a mapping for formatted filenames with indices
+        file_name_mapping_with_indices = dict(zip(formatted_names_with_indices, filtered_filenames))
+
         quizFile = st.sidebar.selectbox(
             label="Choose quiz",
-            options=filenames,
-            index=None
+            options=formatted_names_with_indices,
+            index=0
         )
         if quizFile:
-            showQuiz.showQuiz(quizFile)
-        st.sidebar.button("Generate Quiz", on_click=makeQuiz.makeQuiz, args=(jlptLevel, ))
+            fileToShow = file_name_mapping_with_indices[quizFile]
+            showQuiz.showQuiz(quizFile=fileToShow)
+        st.sidebar.button("Generate Quiz", on_click=makeQuiz.makeQuiz, args=(jlptLevel, topic))
     

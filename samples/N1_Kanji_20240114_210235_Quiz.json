@@ -1,0 +1,57 @@
+[
+  {
+    "question": "\u79c1\u306f\u6bce\u671d(\u8d77)\u304d\u308b\u3068\u3001\u30b8\u30e7\u30ae\u30f3\u30b0\u3092\u3057\u307e\u3059\u3002\nWatashi wa maiasa (\u304d)\u308b\u3068\u3001jogingu o shimasu.",
+    "answers": [
+      "\u304d",
+      "\u306c",
+      "\u3061",
+      "\u3051",
+      "\u304f"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "\u5f7c\u306f\u5927\u5b66\u3067(\u52c9)\u5f37\u3057\u305f\u7d4c\u9a13\u304c\u3042\u308a\u307e\u3059\u3002\nKare wa daigaku de (\u3079\u3093)\u304d\u3087\u3046\u3057\u305f\u3051\u3044\u3051\u3093\u304c\u3042\u308a\u307e\u3059\u3002",
+    "answers": [
+      "\u3079\u3093",
+      "\u304a\u3093",
+      "\u3088",
+      "\u3055",
+      "\u3082\u3093"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "\u65e5\u672c\u306e(\u56fd)\u306f\u6771\u4eac\u3067\u3059\u3002\nNihon no (\u304f\u306b)\u306f\u3068\u3046\u304d\u3087\u3046\u3067\u3059\u3002",
+    "answers": [
+      "\u304f\u306b",
+      "\u3068",
+      "\u304a",
+      "\u3075",
+      "\u3081"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "\u5f7c\u306b\u306f\u591a(\u624d)\u304c\u3042\u308a\u307e\u3059\u3002\nKare ni wa ta(\u3055\u3044)\u304c\u3042\u308a\u307e\u3059\u3002",
+    "answers": [
+      "\u3055\u3044",
+      "\u304b",
+      "\u306f",
+      "\u304e",
+      "\u3082"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "\u5f7c\u306e(\u60c5)\u5831\u306f\u672c\u5f53\u3067\u3059\u304b\uff1f\nKare no (\u3058\u3087\u3046)\u5831\u306f\u307b\u3093\u3068\u3046\u3067\u3059\u304b\uff1f",
+    "answers": [
+      "\u3058\u3087\u3046",
+      "\u304b",
+      "\u3093",
+      "\u305e",
+      "\u307f"
+    ],
+    "correctAnswer": 0
+  }
+]

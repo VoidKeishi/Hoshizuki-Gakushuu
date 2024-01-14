@@ -1,6 +1,7 @@
 from PIL import Image
 import pytesseract
 import os
+from io import BytesIO
 def image_to_text(file):
     """
     This function will handle the core OCR processing of images. input must be a string indicating the path of the image file or a pillow image object
@@ -12,7 +13,9 @@ def image_to_text(file):
         image = Image.open(file)
     if isinstance(file, Image.Image):
         image = file
+    elif isinstance(file, BytesIO):
+        image = Image.open(file)
     else:
-        raise TypeError("Input must be a string or a file object or a pillow image object")
+        raise TypeError("Input must be a string or a file object or a pillow image object or a BytesIO object")
     text = pytesseract.image_to_string(image, lang="Japanese")
     return text

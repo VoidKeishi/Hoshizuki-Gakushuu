@@ -16,8 +16,7 @@ st.set_page_config(
 # load_css()
 
 with st.sidebar:
-  add_logo = st.sidebar.markdown(
-        "<a href='http://localhost:8501' target='_self'>Hoshizuki Gakushuu</a>", unsafe_allow_html=True)
+  st.write(f"# Japanese Learning App")
   optionMenu = option_menu(
   menu_title=None,
   options=["Home", "Learn", "Chat", "About Us"],
