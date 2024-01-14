@@ -1,0 +1,14 @@
+[
+  {
+    "role": "system",
+    "content": "You are an assistant bot that help translate Japanese"
+  },
+  {
+    "role": "user",
+    "content": "Translate Infinity Glove to Japanese for me"
+  },
+  {
+    "role": "assistant",
+    "content": "\u30a4\u30f3\u30d5\u30a3\u30cb\u30c6\u30a3\u30b0\u30ed\u30fc\u30d6"
+  }
+]

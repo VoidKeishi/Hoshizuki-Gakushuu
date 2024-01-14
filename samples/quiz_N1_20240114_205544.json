@@ -1,0 +1,57 @@
+[
+  {
+    "question": "\u6b21\u306e\u5358\u8a9e\u306e\u610f\u5473\u3092\u9078\u3093\u3067\u304f\u3060\u3055\u3044: \u6182\u9b31",
+    "answers": [
+      "\u559c\u3073",
+      "\u6016\u304c\u308a",
+      "\u60b2\u3057\u307f",
+      "\u8208\u596e",
+      "\u60a9\u307f"
+    ],
+    "correctAnswer": 4
+  },
+  {
+    "question": "\u6b21\u306e\u5358\u8a9e\u306e\u610f\u5473\u3092\u9078\u3093\u3067\u304f\u3060\u3055\u3044: \u61d0\u7591\u7684",
+    "answers": [
+      "\u4fe1\u983c\u3067\u304d\u308b",
+      "\u8208\u5473\u6df1\u3044",
+      "\u6b63\u76f4\u306a",
+      "\u7591\u3044\u6df1\u3044",
+      "\u697d\u89b3\u7684"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "question": "\u6b21\u306e\u5358\u8a9e\u306e\u610f\u5473\u3092\u9078\u3093\u3067\u304f\u3060\u3055\u3044: \u654f\u611f",
+    "answers": [
+      "\u7121\u95a2\u5fc3",
+      "\u920d\u611f",
+      "\u6c17\u307e\u3050\u308c",
+      "\u7e4a\u7d30",
+      "\u512a\u67d4\u4e0d\u65ad"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "question": "\u6b21\u306e\u5358\u8a9e\u306e\u610f\u5473\u3092\u9078\u3093\u3067\u304f\u3060\u3055\u3044: \u614e\u91cd",
+    "answers": [
+      "\u71b1\u5fc3",
+      "\u72ec\u7279",
+      "\u7121\u9244\u7832",
+      "\u51b7\u9759",
+      "\u6ce8\u610f\u6df1\u3044"
+    ],
+    "correctAnswer": 4
+  },
+  {
+    "question": "\u6b21\u306e\u5358\u8a9e\u306e\u610f\u5473\u3092\u9078\u3093\u3067\u304f\u3060\u3055\u3044: \u4f9d\u5b58",
+    "answers": [
+      "\u81ea\u7acb",
+      "\u72ec\u7acb",
+      "\u4fe1\u983c",
+      "\u4f9d\u983c",
+      "\u4f9d\u5b58"
+    ],
+    "correctAnswer": 5
+  }
+]

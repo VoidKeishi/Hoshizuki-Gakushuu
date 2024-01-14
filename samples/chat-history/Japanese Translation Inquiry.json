@@ -1,0 +1,14 @@
+[
+  {
+    "role": "system",
+    "content": "You are an assistant bot that help translate Japanese"
+  },
+  {
+    "role": "user",
+    "content": "hey phan anh gay"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello! How may I assist you today? Just to clarify, are you looking for assistance with translating Japanese?"
+  }
+]
